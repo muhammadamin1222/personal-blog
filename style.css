@@ -1,0 +1,296 @@
+/* Umumiy stil */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: backgroundAnimation 30s ease infinite; /* Orqa fonda animatsiya */
+}
+
+/* Orqa fon animatsiyasi */
+@keyframes backgroundAnimation {
+    0% {
+        background: linear-gradient(45deg, #ff6a00, #ee0979, #ffb900);
+    }
+    25% {
+        background: linear-gradient(45deg, #ff9a8b, #ffc3a0, #ff677d);
+    }
+    50% {
+        background: linear-gradient(45deg, #56ab2f, #a8e063, #56ccf2);
+    }
+    75% {
+        background: linear-gradient(45deg, #ff512f, #dd2476, #ff9a8b);
+    }
+    100% {
+        background: linear-gradient(45deg, #ff6a00, #ee0979, #ffb900);
+    }
+}
+
+/* Uchib yuradigan ikonalar animatsiyasi */
+.floating-icons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.icon {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    opacity: 0.8;
+    transition: transform 1s ease-in-out, top 1s, left 1s;
+    animation: float 10s infinite;
+}
+
+.icon i {
+    font-size: 30px;
+    color: white;
+}
+
+/* Animatsiya */
+@keyframes float {
+    0% {
+        top: 20%;
+        left: 10%;
+        transform: scale(1);
+    }
+    25% {
+        top: 50%;
+        left: 60%;
+        transform: scale(1.5);
+    }
+    50% {
+        top: 80%;
+        left: 90%;
+        transform: scale(1);
+    }
+    75% {
+        top: 30%;
+        left: 70%;
+        transform: scale(1.5);
+    }
+    100% {
+        top: 20%;
+        left: 10%;
+        transform: scale(1);
+    }
+}
+
+/* Umumiy stil */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: backgroundAnimation 30s ease infinite; /* Orqa fonda animatsiya */
+}
+
+/* Orqa fon animatsiyasi */
+@keyframes backgroundAnimation {
+    0% {
+        background: linear-gradient(45deg, #ff6a00, #ee0979, #ffb900);
+    }
+    25% {
+        background: linear-gradient(45deg, #ff9a8b, #ffc3a0, #ff677d);
+    }
+    50% {
+        background: linear-gradient(45deg, #56ab2f, #a8e063, #56ccf2);
+    }
+    75% {
+        background: linear-gradient(45deg, #ff512f, #dd2476, #ff9a8b);
+    }
+    100% {
+        background: linear-gradient(45deg, #ff6a00, #ee0979, #ffb900);
+    }
+}
+
+/* Header bo'limi */
+header {
+    background: linear-gradient(135deg, #4a90e2, #50e3c2); /* Rangni moslashtirdik */
+    color: white;
+    text-align: center;
+    padding: 15px 0; /* Kichraytirilgan padding */
+    animation: slideInFromTop 1s ease-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+/* Header matni */
+h1 {
+    font-size: 2.2rem; /* Kichraytirilgan font o'lchami */
+    margin: 0;
+}
+
+/* Footer bo'limi */
+footer {
+    background: linear-gradient(135deg, #4a90e2, #50e3c2); /* Header bilan bir xil fon */
+    color: white;
+    text-align: center;
+    padding: 15px 0; /* Kichraytirilgan padding */
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
+    animation: slideInFromBottom 1s ease-out;
+}
+
+/* Animatsiyalar */
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Ijtimoiy tarmoq havolalari */
+.social-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 100px; /* Yuqoridan pastga tushirish */
+    margin-bottom: 100px; /* Pastki bo'shliqni oshirish */
+}
+
+/* Har bir ijtimoiy tarmoq bo'lagi */
+.social-item {
+    margin: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Ijtimoiy tarmoq havolalarining nomi */
+.social-item p {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    color: white;
+}
+
+/* Ikonkalarni pastga tushurish */
+.icon-wrapper {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    background-image: url('./img/photo_2025-02-27_20-30-27.jpg'); /* Ikonkalar orqasidagi rasm */
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    z-index: 1;
+    margin-top: 30px; /* Ikonkalarni pastga tushirish uchun margin-top qo'shish */
+}
+
+/* Ikonkaning o'zi */
+.icon-wrapper i {
+    font-size: 40px;
+    color: white;
+    z-index: 2;
+    transition: color 0.3s ease;
+}
+
+/* Hover holatidagi rasm va ikonka o'zgarishlari */
+.social-link:hover .icon-wrapper {
+    background: linear-gradient(45deg, #333333, #0066cc); /* Ko'k va qora aralash fon */
+    transform: scale(1.5);
+}
+
+.social-link:hover .icon-wrapper i {
+    color: white;
+}
+
+.social-item:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Uchib yuradigan ikonalar animatsiyasi */
+.floating-icons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.icon {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    opacity: 0.8;
+    transition: transform 1s ease-in-out, top 1s, left 1s;
+    animation: float 10s infinite;
+}
+
+.icon i {
+    font-size: 30px;
+    color: white;
+}
+
+@keyframes float {
+    0% {
+        top: 20%;
+        left: 10%;
+        transform: scale(1);
+    }
+    25% {
+        top: 50%;
+        left: 60%;
+        transform: scale(1.5);
+    }
+    50% {
+        top: 80%;
+        left: 90%;
+        transform: scale(1);
+    }
+    75% {
+        top: 30%;
+        left: 70%;
+        transform: scale(1.5);
+    }
+    100% {
+        top: 20%;
+        left: 10%;
+        transform: scale(1);
+    }
+}
